@@ -24,9 +24,9 @@ public class ProductsController {
         this.moneyService = moneyService;
     }
 
-    @GetMapping("/product/buy")
+    @GetMapping("/product/buy/{productId}")
     @ResponseBody
-    public String buyProduct(String productId){
+    public String buyProduct(@PathVariable String productId){
         try {
             return moneyService.buyProduct(productId);
         } catch (InsufficientFundsException | ProductNotFoundException e) {

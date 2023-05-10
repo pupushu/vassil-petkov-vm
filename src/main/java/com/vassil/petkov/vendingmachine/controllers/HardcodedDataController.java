@@ -56,7 +56,7 @@ public class HardcodedDataController {
         return moneyService.reset();
     }
 
-    @GetMapping("demo/product-add")
+    @GetMapping("/demo/product-add")
     @ResponseBody
     public List<VendingMachineProductModel> addProduct(){
         VendingMachineProductModel p1 = new VendingMachineProductModel("1", "Coca Cola", 5, 2.30);
